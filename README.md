@@ -1,0 +1,2 @@
+# Kofigurasi-LAN-MAN
+cisco
