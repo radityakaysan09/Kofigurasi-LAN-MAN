@@ -1,0 +1,11 @@
+# ROUTER 1
+enable
+conf t
+ip route 0.0.0.0 0.0.0.0 10.0.0.2
+do wr
+
+
+# ROUTER 2
+enable
+conf t
+ip route 0.0.0.0 0.0.0.0 10.0.0.1
