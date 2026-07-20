@@ -1,0 +1,37 @@
+# ROUTER 1
+enable
+conf t
+int g0/0
+ip address 192.168.1.1 255.255.255.0
+int s0/1/0
+ip address 10.0.0.1 255.0.0.0
+no shutdown
+clock rate
+clock rate 6400
+do wr
+exit
+exit
+exit
+enable
+conf t
+ip route 192.168.2.0 255.255.255.0 10.0.0.2
+do wr
+
+
+# ROUTER 2
+enable
+conf t
+int s0/1/0
+ip address 10.0.0.2 255.0.0.0
+no shutdown
+int g0/0
+ip address 192.168.2.1 255.255.255.0
+no shutdwon
+do wr
+exit
+exit
+exit
+enable
+conf t
+ip route 192.168.1.0 255.0.0.0 10.0.0.1
+do wr
