@@ -1,2 +1,2 @@
-# Kofigurasi-LAN-MAN
+configurasi-static-default
 cisco
